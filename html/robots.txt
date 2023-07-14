@@ -1,0 +1,2 @@
+DisAllow:/login.html
+DisAllow:/f1ag.txt
