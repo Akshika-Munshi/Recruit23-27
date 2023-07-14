@@ -1,5 +1,58 @@
 ```
 ###########################################################################
+#
+# snmpd.conf
+# An example configuration file for configuring the Net-SNMP agent ('snmpd')
+# See snmpd.conf(5) man page for details
+#
+###########################################################################
+# SECTION: System Information Setup
+#
+
+# syslocation: The [typically physical] location of the system.
+#   Note that setting this value here means that when trying to
+#   perform an snmp SET operation to the sysLocation.0 variable will make
+#   the agent return the "notWritable" error code.  IE, including
+#   this token in the snmpd.conf file will disable write access to
+#   the variable.
+#   arguments:  location_string
+sysLocation    ⠏⠼⠉⠝⠞⠼⠉&⠞{⠍⠽⠸⠼⠉⠽⠼⠉⠑⠸⠼⠙⠗⠼⠉⠸⠼⠑⠚⠸⠙⠗⠽⠸⠼⠁⠓⠼⠉⠽⠸⠉⠼⠚⠥⠼⠁⠙⠸⠉⠗⠼⠙⠅⠖}
+sysContact     imrightheredarth@starwars.space
+
+# sysservices: The proper value for the sysServices object.
+#   arguments:  sysservices_number
+sysServices    72
+
+
+
+###########################################################################
+# SECTION: Agent Operating Mode
+#
+#   This section defines how the agent will operate when it
+#   is running.
+
+# master: Should the agent operate as a master agent or not.
+#   Currently, the only supported master agent type for this token
+#   is "agentx".
+#   
+#   arguments: (on|yes|agentx|all|off|no)
+
+master  agentx
+
+# agentaddress: The IP address and port number that the agent will listen on.
+#   By default the agent listens to any and all traffic from any
+#   interface on the default SNMP port (161).  This allows you to
+#   specify which address, interface, transport type and port(s) that you
+#   want the agent to listen on.  Multiple definitions of this token
+#   are concatenated together (using ':'s).
+#   arguments: [transport:]port[@interface/address],...
+
+agentaddress  udp:192.168.248.142:161
+
+
+
+
+###########################################################################
 # SECTION: Access Control Setup
 #
 #   This section defines who is allowed to talk to your running
@@ -33,4 +86,6 @@ rocommunity public
 rouser authPrivUser authpriv -V systemonly
 
 # include a all *.conf files in a directory
+includeDir /etc/snmp/snmpd.conf.d
+
 ```
