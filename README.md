@@ -1,7 +1,7 @@
 # Recruit23-27
 Recruitment Tasks for 1st years 
 
-##PLAN OF ACTION##
+## PLAN OF ACTION ##
 
 RECRUITMENT TASKS
 
