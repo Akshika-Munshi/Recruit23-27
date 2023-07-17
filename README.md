@@ -8,7 +8,9 @@ RECRUITMENT TASKS
 BOOT2ROOT:
 
 * FTP anonymous login-10pts
-* JPEG steganography-25pts
+* JPEG steganography-50pts
+       level 1 - base64-10pts
+       level 2 - jr & steghide - 40pts
 *Cracking zip file password-25pts
 * SQL injection in the webpage(can only be viewed using robots.txt)-30pts.
 * Cookies related Burpsuite tasks-30pts
