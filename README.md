@@ -9,8 +9,8 @@ BOOT2ROOT:
 
 * FTP anonymous login-10pts
 * JPEG steganography-50pts
-      <br> level 1 - base64-10pts
-      <br> level 2 - jr & steghide - 40pts
+      <br><t> level 1 - base64-10pts
+      <br><t>level 2 - jr & steghide - 40pts
 *Cracking zip file password-25pts
 * SQL injection in the webpage(can only be viewed using robots.txt)-30pts.
 * Cookies related Burpsuite tasks-30pts
