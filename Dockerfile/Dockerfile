@@ -1,8 +1,12 @@
 FROM debian:buster-slim
 
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y snmpd
+    apt-get install -y cron && \
+    echo "qwerty" > /root/root.txt
 
-COPY snmpd.conf /etc/snmp/snmpd.conf
+RUN touch /home/root.sh && \
+    chmod 766 /home/root.sh
 
-RUN service snmpd start
+COPY crontab /etc/crontab
+CMD  service cron start && service cron restart
+
