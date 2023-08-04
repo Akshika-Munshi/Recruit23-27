@@ -55,7 +55,7 @@ PORT   STATE SERVICE
 80/tcp open  http
 ```
 We can see that http port is open on port 80.
-## HTTP
+## HTTP `Look this at maximum brightness possible .lol`
 ##### Robots.txt
 ```
 DisAllow:/login.html
@@ -64,7 +64,7 @@ DisAllow:/f1ag.txt
 ##### Login.html
 We have a sql injectable login page on the website which comes on the screen only when we hover on it.
 
-![image](screenshots/Screenshot from 2023-08-04 18-38-37.png)
+![Screenshot](screenshots/Screenshot%20from%202023-08-04%2018-38-37.png)
 
 On making the sql query it returns all the data in the database to the user out of which we have only one admin whose credentials will lead us to the flag.
 ## UDP SCAN
