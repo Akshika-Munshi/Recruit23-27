@@ -14,8 +14,9 @@ if (mysqli_connect_errno()) {
     if (mysqli_num_rows($result) > 0) {
         if ($password === "nimda!@" && $username === "admin") {
             echo '<body style="background-color:black">';
-            echo '<h2 style="color:green;font-family:monospace;"> &gt p3nt3&t({w1Com3_70_tHe_DarK_5Ide}</h2>';
-            echo "---------------------------Anakin's destiny---------------------------shortcuts nor magic, just trials one by one, Exploring all paths, till the right one is finally spun";
+            echo '<h2 style="color:green;font-family:monospace;"> &gt -------------------------------------------Anakin\'s destiny-------------------------------------------</h2>';
+            echo '<h2 style="color:green;font-family:monospace;"> &gt No Shortcuts nor magic, just trials one by one, Exploring all paths, till the right one is finally spun</h2>';
+            echo "<br>p3nt35t{7HErEs_AlwAys_4_BI9ger_F1sh}";
         } else {
             $result1 = mysqli_query($con, $query1);
             echo "<center>";
