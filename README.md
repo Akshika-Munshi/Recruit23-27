@@ -150,4 +150,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 we can see that a executable file always runs as  root user and that has rwx permissions for anakin from now there are many possible ways to get the root flag which stored in /root/root.txt.
 
 
+## JPEG-Stegnography Challange
+
 
