@@ -63,6 +63,7 @@ DisAllow:/f1ag.txt
 ```
 ##### Login.html
 We have a sql injectable login page on the website which comes on the screen only when we hover on it.
+
 ![image](screenshots/Screenshot from 2023-08-04 18-38-37.png)
 
 On making the sql query it returns all the data in the database to the user out of which we have only one admin whose credentials will lead us to the flag.
@@ -146,7 +147,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 * * * * * root cd ./ && ./root.sh
 #
 ``` 
-we can see that a executable file always runs as  root user and that has rwx permissions for anakin from now there are many possible ways to get the root flag which stored in /root/eoot.txt.
+we can see that a executable file always runs as  root user and that has rwx permissions for anakin from now there are many possible ways to get the root flag which stored in /root/root.txt.
 
 
 
