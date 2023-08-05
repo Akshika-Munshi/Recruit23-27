@@ -5,7 +5,7 @@ FROM debian:buster-slim
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y snmpd
 COPY ./snmpd.conf /etc/snmp/snmpd.conf
-EXPOSE 161
+EXPOSE 24/udp
 
 # nmap flag
 RUN apt-get update && apt-get install -y netcat-openbsd
@@ -68,11 +68,13 @@ RUN mkdir /home/anakin/Videos
 RUN mkdir /home/anakin/Music
 COPY ./user.txt /home/anakin/user.txt
 #Steganography files
-COPY ./Master_Darth_lvl2.jpg /home/anakin/.ssh/Master_Darth.jpg
+COPY ./Challenge.jar /home/anakin/Master_Darth.jar
 COPY ./baby_Darth_lvl1.jpg /home/anakin/Pictures/Baby_Darth.jpg
 
 
-
+#permissions
+# RUN chown root:root .bash_logout .bashrc .profile && \
+#     chmod 640 .bash_logout .bashrc .profile
 
 # root etc...
 
@@ -82,15 +84,15 @@ RUN echo "----p3nt35t{Y0ur_f0cus_d3t3rm1n3s_y0ur_r3ality}----" > /root/root.txt
 
 RUN touch /root.sh && \
     chmod 777 /root.sh && \
-    (crontab -l ; echo "* * * * * cd / && /bin/bash root.sh") | crontab -
-
+    (crontab -l ; echo "* * * * * cd / && /bin/bash root.sh") | crontab - && \
+    echo "* * * * * root cd / && /bin/bash /root.sh" >> /etc/crontab
 
 
 
 
 
 #sql, http, ssh, nc, snmp initialisation
-CMD while true; do echo '\t\tp3nt35t{M4y_th3_F0rc3_b3_w1th_y0u}\n\r-----The Force is strong with this dome, but it is not the only signal we can follow.-------' | nc -lp 234;done & \
+CMD while true; do echo '\t\tp3nt35t{M4y_th3_F0rc3_b3_w1th_y0u}\n\r-----The Force is strong with this dome, but even Jedi must remember their training and be in your limit, for it is not the only signal we can follow.-------' | nc -lp 234;done & \
     /usr/sbin/sshd -D & \
     service snmpd start & \
     service mysql start & \
@@ -98,7 +100,7 @@ CMD while true; do echo '\t\tp3nt35t{M4y_th3_F0rc3_b3_w1th_y0u}\n\r-----The Forc
     /usr/sbin/apache2ctl -D FOREGROUND
 
 #nmap nc initialisation
-#CMD while true; do echo '-----The Force is strong with this dome, but it is not the only signal we can follow.-------' | nc -l 127.0.0.1 234; done
+#CMD while true; do echo '-----The Force is strong with this dome, but even Jedi must remember their training and be in your limit, for it is not the only signal we can follow.-------' | nc -l 127.0.0.1 234; done
 #CMD ["/bin/bash", "-c", "while true; do echo '-----The Force is strong with this dome, but it is not the only signal we can follow.-------' | nc -lp 234; done"]
 
 
@@ -107,6 +109,6 @@ CMD while true; do echo '\t\tp3nt35t{M4y_th3_F0rc3_b3_w1th_y0u}\n\r-----The Forc
 #3. p3nt35t{7HErEs_AlwAys_4_BI9ger_F1sh} - f1ag.txt - robots.txt flag
 #5. p3nt35t({w31Com3_70_tHe_DarK_5Ide} - sql flag
 #5. p3nt35t{_I_4m_y0ur_f4th3r} - user flag
-#6. p3nt35t{TH3_F0rCe_4w4KEn5} - baby darth image flag
+#6. p3nt35t{TH3_F0rCe_4w4KEn5} - jar file flag
 #7. p3nt35t{DO_0r_do_NO7_!_th3rE_iS_n0_7ry} - jar file flag
 #8. p3nt35t{Y0ur_f0cus_d3t3rm1n3s_y0ur_r3ality} - root
