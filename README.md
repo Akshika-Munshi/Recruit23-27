@@ -123,6 +123,19 @@ From the hint from the sql challenge we get to know that the ssh username is ana
 Password: skywalker123
 ```
 
+## Jedi Stegwal's Quest (JPEG-Stegnography)
+A txt file is hidden inside the base .jpg image
+On extracting the image using extract feature of steghide tool , we get a txt file called flag.txt 
+On viewing the contents , we see a base64 encoded string , decoding it , gives the file.
+
+## JAR of secrets(Android)
+
+We get an Andrroid file that can oly be opened with tools like Android Studio Code , analyzing the file shows a function which gives a dummy flag , the real flag is encrypted and can be seen in the hexdump of the jar file .
+
+![image](https://github.com/Akshika-Munshi/Recruit23-27/assets/116476084/ff9745a6-6c9a-4922-9cf7-3fa41927d0db)
+
+On decrypting the encoded flag and passing it as a parameter in the provided function , we get the flag.
+
 ## ROOTFLAG
 
 From the hint in user.txt file we check the crontab to check whether there are any tasks scheduled to happpen
@@ -150,18 +163,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 we can see that a executable file always runs as  root user and that has rwx permissions for anakin from now there are many possible ways to get the root flag which stored in /root/root.txt.
 
 
-## Jedi Stegwal's Quest (JPEG-Stegnography)
-A txt file is hidden inside the base .jpg image
-On extracting the image using extract feature of steghide tool , we get a txt file called flag.txt 
-On viewing the contents , we see a base64 encoded string , decoding it , gives the file.
 
-## JAR of secrets(Android)
-
-We get an Andrroid file that can oly be opened with tools like Android Studio Code , analyzing the file shows a function which gives a dummy flag , the real flag is encrypted and can be seen in the hexdump of the jar file .
-
-![image](https://github.com/Akshika-Munshi/Recruit23-27/assets/116476084/ff9745a6-6c9a-4922-9cf7-3fa41927d0db)
-
-On decrypting the encoded flag and passing it as a parameter in the provided function , we get the flag.
 
 
 
