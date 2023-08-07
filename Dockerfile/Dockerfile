@@ -2,7 +2,7 @@ FROM debian:buster-slim
 
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y cron && \
-    echo "qwerty" > /root/root.txt
+    echo "Root flag goes here" > /root/root.txt
 
 RUN touch /home/root.sh && \
     chmod 766 /home/root.sh
