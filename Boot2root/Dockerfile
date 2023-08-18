@@ -5,7 +5,7 @@ FROM debian:buster-slim
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y snmpd
 COPY ./snmpd.conf /etc/snmp/snmpd.conf
-EXPOSE 24/udp
+EXPOSE 161/udp
 
 # nmap flag
 RUN apt-get update && apt-get install -y netcat-openbsd

@@ -47,7 +47,7 @@ master  agentx
 #   are concatenated together (using ':'s).
 #   arguments: [transport:]port[@interface/address],...
 
-agentaddress  udp:192.168.248.142:161
+agentaddress  161
 
 
 
